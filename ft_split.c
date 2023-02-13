@@ -6,7 +6,7 @@
 /*   By: kogitsu <kogitsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:11:28 by kogitsu           #+#    #+#             */
-/*   Updated: 2023/02/11 19:30:07 by kogitsu          ###   ########.fr       */
+/*   Updated: 2023/02/13 19:09:16 by kogitsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static char	**rec(char const *s, char c, int i)
 	char		**container;
 
 	container = NULL;
-	while (*s == c)
+	while (*s == c && c != '\0')
 		s++;
 	if (*s == '\0')
 		return (end_processing(container, i));
@@ -53,3 +53,11 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (rec(s, c, 0));
 }
+
+// int main(void)
+// {
+// 	char * * tab;
+
+// 	tab = ft_split("tripouille", 0);
+// 	printf("%s\n", tab[0]);
+// }
