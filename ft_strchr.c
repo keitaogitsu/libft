@@ -6,7 +6,7 @@
 /*   By: kogitsu <kogitsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 19:09:44 by kogitsu           #+#    #+#             */
-/*   Updated: 2023/02/11 16:14:19 by kogitsu          ###   ########.fr       */
+/*   Updated: 2023/02/13 12:53:24 by kogitsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,9 @@ char	*ft_strchr(const char *s, int c)
 // 	int		c3 = '\0';
 // 	int		c4 = 'a';
 
-// 	printf("dの場合: (ft) %p / (本家) %p\n", ft_strchr(str, c1), strchr(str, c1));
-// 	printf("hの場合: (ft) %p / (本家) %p\n", ft_strchr(str, c2), strchr(str, c2));
-// 	printf("nul文字の場合: (ft) %p / (本家) %p\n", ft_strchr(str, c3), strchr(str, c3));
-// 	printf("aの場合: (ft) %p / (本家) %p\n", ft_strchr(str, c4), strchr(str, c4));
-// 	printf("a+256の場合: (ft) %p / (本家) %p\n", ft_strchr(str, c4+512), strchr(str, c4+512));
-// 	printf("a-256の場合: (ft) %p / (本家) %p\n", ft_strchr(str, c4-256), strchr(str, c4-256));
+// 	printf("dの場合:(ft)%p/(本家)%p\n", ft_strchr(str, c1), strchr(str, c1));
+// 	printf("hの場合:(ft)%p/(本家)%p\n", ft_strchr(str, c2), strchr(str, c2));
+// 	printf("nul文字の場合:(ft)%p/(本家)%p\n", ft_strchr(str, c3), strchr(str, c3));
+// 	printf("aの場合:(ft)%p/(本家)%p\n", ft_strchr(str, c4), strchr(str, c4));
 // 	printf("%d:'a' - 256", (c4 - 256)%256);
 // }

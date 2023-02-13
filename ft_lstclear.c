@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kogitsu <kogitsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/05 16:17:33 by kogitsu           #+#    #+#             */
-/*   Updated: 2023/02/13 12:53:36 by kogitsu          ###   ########.fr       */
+/*   Created: 2023/02/13 15:32:48 by kogitsu           #+#    #+#             */
+/*   Updated: 2023/02/13 16:34:24 by kogitsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strdup(const char *s1)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char	*copy;
+	t_list	*cp_lst;
 
-	copy = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (copy == NULL)
-		return (NULL);
-	ft_strlcpy(copy, (char *)s1, ft_strlen(s1) + 1);
-	return (copy);
+	if (lst == NULL || del == NULL || *lst == NULL)
+		return ;
+	while (*lst != NULL)
+	{
+		cp_lst = *lst;
+		del((*lst)->content);
+		free(*lst);
+		*lst = cp_lst->next;
+	}
+	*lst = NULL;
 }
