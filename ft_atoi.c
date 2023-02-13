@@ -6,7 +6,7 @@
 /*   By: kogitsu <kogitsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 12:17:02 by kogitsu           #+#    #+#             */
-/*   Updated: 2023/02/11 19:20:32 by kogitsu          ###   ########.fr       */
+/*   Updated: 2023/02/13 19:54:17 by kogitsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_isspace(int c)
 	return (0);
 }
 
-size_t	ft_flow_check(size_t num, int minus_flag, size_t n)
+static size_t	ft_flow_check(size_t num, int minus_flag, size_t n)
 {
 	size_t	ov_div;
 	size_t	ov_mod;
