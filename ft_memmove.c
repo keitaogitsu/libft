@@ -6,7 +6,7 @@
 /*   By: kogitsu <kogitsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 22:38:31 by kogitsu           #+#    #+#             */
-/*   Updated: 2023/02/04 18:41:21 by kogitsu          ###   ########.fr       */
+/*   Updated: 2023/02/16 12:51:03 by kogitsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	char		*p_dst;
-	const char	*p_src;
+	unsigned char		*p_dst;
+	const unsigned char	*p_src;
 
 	if (dst == NULL && src == NULL)
 		return (NULL);
-	p_dst = (char *)dst;
-	p_src = (const char *)src;
+	p_dst = (unsigned char *)dst;
+	p_src = (const unsigned char *)src;
 	if (dst < src)
 	{
 		while (n--)
