@@ -6,7 +6,7 @@
 /*   By: kogitsu <kogitsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:11:28 by kogitsu           #+#    #+#             */
-/*   Updated: 2023/02/13 19:09:16 by kogitsu          ###   ########.fr       */
+/*   Updated: 2023/02/16 16:46:05 by kogitsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static char	**end_processing(char **container, int i)
 {
-	container = malloc((i + 1) * sizeof(char *));
+	container = (char **)malloc((i + 1) * sizeof(char *));
 	if (!container)
 		return (NULL);
 	container[i] = NULL;

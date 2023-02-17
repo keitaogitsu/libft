@@ -6,7 +6,7 @@
 /*   By: kogitsu <kogitsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 17:56:12 by kogitsu           #+#    #+#             */
-/*   Updated: 2023/02/11 16:50:44 by kogitsu          ###   ########.fr       */
+/*   Updated: 2023/02/16 16:47:48 by kogitsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	result = malloc(count * size);
 	if (result == NULL)
-		return (result);
+		return (NULL);
 	ft_bzero(result, count * size);
 	return (result);
 }

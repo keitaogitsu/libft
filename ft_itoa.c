@@ -6,13 +6,13 @@
 /*   By: kogitsu <kogitsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:17:48 by kogitsu           #+#    #+#             */
-/*   Updated: 2023/02/09 14:45:53 by kogitsu          ###   ########.fr       */
+/*   Updated: 2023/02/16 16:45:34 by kogitsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	digit_count(int num)
+static size_t	digit_count(int num)
 {
 	size_t	digit_size;
 
