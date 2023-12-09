@@ -6,7 +6,7 @@
 /*   By: kogitsu <kogitsu@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 15:32:48 by kogitsu           #+#    #+#             */
-/*   Updated: 2023/02/13 16:34:24 by kogitsu          ###   ########.fr       */
+/*   Updated: 2023/12/09 21:26:35 by kogitsu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		return ;
 	while (*lst != NULL)
 	{
-		cp_lst = *lst;
-		del((*lst)->content);
-		free(*lst);
-		*lst = cp_lst->next;
+		cp_lst = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = cp_lst;
 	}
-	*lst = NULL;
 }
